@@ -9,11 +9,7 @@ app.get('/', function(req, res){
   res.render('index.hbs', context);
 })
 
-app.get('/finished', function(req, res){
-  res.render('index-FINISHED.hbs')
-})
-
-
-app.listen(8000, function(){
-  console.log('Awesome video-react now up on PORT 8000')
+var PORT = process.env.PORT || 8080;
+app.listen(PORT, function () {
+  console.log('Your app is up on port 8080. Let''s Whack-a-Cat!');
 });
